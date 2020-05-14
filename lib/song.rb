@@ -46,17 +46,17 @@ class Song
   def self.new_from_filename(filename)
     #removing the .mp3 suffix and splitting the string 
     song_details_array = filename.delete_suffix('.mp3').split(" - ")
-    song = self.new_by_name(song_details_array[1])
-    song.artist_name = song_details_array[0]
+    artist_name = song_details_array[0]
+    song_name = song_details_array[1]
+
+    song = self.new_by_name(song_name)
+    song.artist_name = artist_name
     song
   end
 
   def self.create_from_filename(name)
     song = self.new_from_filename(name)
     song.save
-    # song_details_array = filename.delete_suffix('.mp3').split(" - ")
-    # song = self.create_by_name(song_details_array[1])
-    # song.artist_name = song_details_array[0]
     song
   end
 
