@@ -90,7 +90,7 @@ class Song
 
   def self.destroy_all
     # we call the all method which returns an array with all the song objects and then we chain it to a clear method that removes all the data from the array.
-    self.all = []
+    self.all.clear
   end
 
 end
