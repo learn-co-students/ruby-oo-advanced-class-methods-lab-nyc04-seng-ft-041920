@@ -1,0 +1,145 @@
+Mechanics OOP - Study Group
+when  you take a primitive and make it something more abstract
+that is REIFY. 
+Taking primitive and turn it into instances = REIFY something
+
+SINGLETON CLASS
+A class that never ever has no instances defined!
+
+All classes are constants and constants are always 
+accessible throughout hte program
+
+class ErrorLogger
+
+def self.warn!
+
+def self.ino!
+end
+
+de self.export
+end
+
+end
+
+This is a SINGLETON, as I"m never going to 
+instantiate this class. It's a way to group a bounch 
+of methods together and we're never going to instantiate these.
+
+SINGLETON examples;
+A global logger or messenger or service
+
+Bad examples: A scrapper class, a querying class, a model class like a song.
+
+CLASS DEFINITION 
+
+class = Blueprint for something you instantiate and then use 
+Factory = Can make new versions of itself. It can make new cars. 
+
+Class #= Represents "all of Something"
+
+Instance => Represents an Individual
+
+The reason we call instance variables 
+instance variables is because their scope
+is defined to a single instance 
+
+avi.instance_variables (this gives us the list of instance variables inside that instance object, avi, in this case)
+
+Instance variables are for allowing each object to have it's own values and it's own properties and never, ever conflict 
+
+do all setter methods need a def method=(hi) ...end
+when you overwrite a method, super refers to the previous definitions on comment 
+
+
+CLASS MEMOIZATION = TEACHING AN OBJECT HOW TO REMEMBER IT! 
+CLASS MEMOIZATION = TEACHING AN OBJECT HOW TO REMEMBER IT!
+
+Difference between a class constant and a class variable 
+
+We want to pass self because name or the var is just a string.
+
+In an instance method, self will refer to the instance itself! 
+
+In a class method, self will refer to the class itself! the entire class! 
+
+CUSTOME CUSTROCTOR EXTENDS FUNCTIONALITY of saving and creating at the same time 
+A class constructor is any class method that 
+instantiates an instance of the class. The built-in constructorfor all class is Class.new. To 
+customize functionality, you could override the default 
+initialize method but it is better to extend new 
+by wrapping it in your own constructor. 
+
+def self.create(name)
+song = self.new(name)
+song.save
+return song
+end
+
+Class Variables 
+are for properties that belong to the entire class
+commonly, a class level variable is used to instance MEMOIZATION(remembering all isntances of a class)
+
+Collaborating data, such as hardcoded list of approved Genre
+names is another common usage. 
+
+
+
+________________________________________________
+
+ Class methods are in scope in class methods and instance methods 
+
+ Leaky Inheretence - class variables @@all = [] vs ALL = []
+
+ never escape a loop with return!!!!!!!!!!!
+
+ detect = returns single element value that evals to true and is not an array or nil if none.
+
+find_all = return an array for all values that evaluate to true or an empty array 
+
+find_all && select are the same!!! 
+
+FIND_ALL && SELECT ARE THE SAME! 
+
+THINK ABOUT EVALUATION TO TRUE!!!
+
+Use higher level iterators!!! 
+
+SELECT = returns vals that eval true
+DETECT = return first instance that evals to true 
+
+
+OPEN FOR EXTENTION AND CLOSED FOR MODIFICATION!
+
+CONSTRUCTOR!!!!!!!!!!!!!!!!!!!!!!!!!!!
+below is called a constructor, extends functionality of initialize
+def self.create 
+c = self.new 
+c.save 
+c
+end
+
+other example
+
+def self.new_from_hash(hash)
+c = self.new
+c.name = hash[:name]
+c.venue = hash[:venue]
+c.location = hash[:location]
+c
+end
+
+@@all = []
+
+def save
+@@all << self
+end
+
+1. self
+2.class methods
+3. class variables
+4. constructors 
+5. finders 
+6. modules 
+
+alt command c for history 
+
