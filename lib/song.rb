@@ -88,3 +88,22 @@ end
 
 
 
+# new_song = Song.create
+# Song.all.include?(new_song)
+# new_song = Song.new_by_name("street")
+# new_song.name
+# new_song2 = Song.create_by_name("Bottom Bitch")
+# new_song2
+# Song.all.include?(new_song2)
+# new_song2.name
+# bottom_bitch_file = Song.create_by_name("Bottom Bitch")
+# Song.find_by_name("Bottom Bitch")
+# song_3 = Song.find_or_create_by_name("we are the champion")
+
+# song_5 = Song.create_by_name("song5")
+# song_6 = Song.create_by_name("song 6")
+# song_7 = Song.create_by_name("song 7")
+# Song.alphabetical
+
+# song = Song.new_from_filename("Thundercat - For Love I Come.mp3")
+# Song.destroy_all
